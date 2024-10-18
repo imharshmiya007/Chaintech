@@ -1,0 +1,646 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 165px;
+    height: 48.5px;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+.toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    text-align: left;
+    margin-top: 20px;
+    margin-right: 200px;
+}
+
+.nav-list li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s;
+    line-height: 27px;
+}
+
+.nav-list li a:hover {
+    color: #00FFA7;
+    border-radius: 4px;
+}
+
+.nav-list.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-list.active li {
+    padding: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 691px;
+    background-color: #000;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text-1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 794px;
+    height: 350px;
+    opacity: 1;
+    position: absolute;
+}
+
+.text-2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-align: center;
+    width: 990px;
+    height: 100px;
+    position: absolute;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.gradient {
+    background: linear-gradient(270deg, #00FFA7 0%, #FFFF00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 971px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27.39px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    width: 861px;
+    top: 441px;
+    opacity: 1;
+}
+
+.hero button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    width: 185px;
+    height: 66px;
+    margin-top: 450px;
+    margin-bottom: -10px;
+    border-radius: 50px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    height: 1150px;
+}
+
+.services h2 {
+    width: 523px;
+    height: 60px;
+    top: 89px;
+    gap: 0px;
+    margin-top: 60px;
+    opacity: 0px;
+    margin-left: 185px;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 70.7px;
+    text-align: left;
+
+}
+
+.section-text{
+    width: 900.2px;
+    height: 5px;
+    margin-left: 185px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.45px;
+    text-align: left;
+
+}
+
+.section-img{
+    width: 93px;
+    margin-top: -100px;
+    margin-bottom: -70px;
+    margin-right: -1050px;
+    text-align: right;
+}
+
+/* Container for Services Cards */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Cards Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping for smaller screens */
+    justify-content: space-between; /* Adds space between cards */
+}
+
+/* Individual Service Card */
+.service-card {
+    background-color: #f0fff0;
+    border: 3px solid #000000;
+    padding: 20px;
+    height: 402px;
+    width: 265px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 0px; /* Adds space between rows */
+}
+
+/* Ensuring the card width and number of columns */
+.col-lg-3 {
+    flex: 0 0 23%; /* Adjusting to fit four cards in one row */
+    max-width: 23%; 
+    margin-bottom: 20px;
+}
+
+
+/* Service Card Image */
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+
+/* Service Card Heading */
+.service-card h3 {
+    margin: 20px 0;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.line-layout-box-2 {
+    position: absolute;
+    width: 264px;
+    left: 5.5%;
+    height: 285px;
+    top: 50px;
+    border: 2px solid #000000;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Service Card Button */
+.service-card button {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    font-size: 14px; /* Set font size */
+    font-weight: 600; /* Set font weight */
+    background-color: white;
+    color: #000;
+    border: 2px solid #000; /* Corrected border with width, style, and color */
+    bottom: 50px;
+    height: 45px;
+    padding: 10px 20px;
+    margin-top: 3.5px;
+    margin-left: 90px;
+    cursor: pointer;
+    border-radius: 50px; /* Slight rounding for better aesthetics */
+}
+
+
+
+.service-card button:hover {
+    background-color: #020202; /* Darker shade on hover */
+    color: white;
+}
+
+
+/* Footer */
+footer {
+    background-color: #000;
+    height: 200px;
+    color: #98A6AC;    ;
+    display: flex;
+    align-items: center;  /* Vertically centers the content */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center; /* Aligns text centrally */
+    padding: 0 50px; /* Adds some horizontal padding to the footer */
+}
+
+/* Footer content with flexbox */
+.footer-content {
+    display: flex;
+    align-items: center;  /* Aligns items in the center vertically */
+    justify-content: space-between;  /* Adds space between the logo and the text */
+    width: 100%;  /* Full width for the footer */
+    max-width: 1200px; /* Restricts the width */
+}
+
+/* Logo footer */
+.logo-footer img {
+    width: 150px;  /* Adjust the logo width based on your preference */
+    margin-left: 0px;
+    margin-bottom: 50px;
+    margin-top: 35px;
+    height: auto;  /* Keeps the logo aspect ratio */
+}
+.line-layout-footer {
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    top: 2025px;
+    left: 15%;
+    right: 15%;
+    border: 1px solid #5e5e5e;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Footer text */
+.footer-content p {
+    font-size: 14px;
+    padding-left: 25px;  /* Space between logo and text */
+    text-align: right;  /* Align text to the right */
+    margin-top: 30px;  /* Adjust this value to move the text down */
+}
+
+
+/* Line Layout */
+.line-layout {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 98px;
+    left: 0;
+    border: 0.95px solid #1F1F1F;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .logo{
+        margin-left: 30px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #000;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .hero {
+        height: auto; /* Allow height to adjust */
+        padding: 30px 20px; /* Adjust padding */
+    }
+
+    .hero .text-1 {
+        font-size: 60px; /* Responsive font size */
+        padding: 50px 0px 0px 0px; /* Adjust padding */
+        width: auto; /* Allow width to adjust */
+    }
+
+    .hero .text-2 {
+        font-size: 60px; /* Responsive font size */
+        width: auto; /* Allow width to adjust */
+    }
+
+    .hero p {
+        font-size: 16px; /* Responsive font size */
+        margin: -120px 20px 0px 20px;
+        width: auto; /* Allow width to adjust */
+    }
+
+    .hero button {
+        width: 170px; /* Responsive button size */
+        margin-bottom: 10px;
+    }
+
+    .services h2 {
+        font-size: 28px; /* Responsive font size */
+    }
+
+    .service-card h3 {
+        font-size: 20px; /* Responsive font size */
+    }
+
+    .col-md-6 {
+        flex: 0 0 48%; /* Two columns on medium screens */
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 993px) {
+    .logo {
+        margin-left: 40px;
+    }
+    .nav-list {
+       margin-right: 20px;
+       gap: 15px;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .hero .text-1 {
+        font-size: 50px; /* Smaller font size */
+    }
+
+    .hero .text-2 {
+        font-size: 50px; /* Smaller font size */
+    }
+
+    .hero p {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .services h2 {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    .service-card h3 {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%; /* One column per row on small screens */
+        max-width: 100%;
+    }
+    .navbar{
+        width: 150%;
+    }
+    .hero{
+        width: 150%;
+    }
+    .services{
+        width: 150%;
+        height: 200%;
+    }
+    .section-text{
+        width: 71%;
+        margin-bottom: 40px;
+    } 
+    .section-img{
+        display: none;
+    }
+    footer {
+        width: 150%;
+    }
+    .line-layout-footer{
+        margin-top: 830px;
+        margin-left: 70px;
+        width: 800px;
+    }
+}
+
+
+/* Large Devices (Desktops) */
+@media (min-width: 1200px) {
+    .col-lg-3 {
+        flex: 0 0 23%; /* Four cards in one row */
+        max-width: 23%;
+    }
+    
+}
+
+@media (min-width: 2560px) {
+    .col-lg-3 {
+        flex: 0 0 23%; /* Four cards in one row */
+        max-width: 23%;
+    }
+    .services h2{
+        margin-left: 650px;
+    }
+    .section-text{
+        margin-left: 650px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .col-md-6 {
+        flex: 0 0 48%; /* Two cards in one row */
+        max-width: 48%;
+    }
+ 
+    
+}
+
+/* Small Devices (Mobile Portrait) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .service-card {
+        width: calc(100% - 20px); /* Full width minus margin */
+        height: 430px; /* Allow height to adjust */
+    }
+    .col-md-6 {
+        flex: 0 0 100%; /* One card in a row */
+        max-width: 100%;
+    }
+    .line-layout-box-2 {
+        margin-left: -5px;
+        width: 309px; ;
+        height: 290px;
+        margin-top: 20px;
+    }
+    .service-card h3 {
+        width: 150px;
+        margin-left: 23%;
+        margin-top: 60px;
+        font-size: 24px;
+        margin-bottom: 50px;
+        align-items: center;
+    }
+    .service-card button{
+        align-items: right;
+        margin-left: 130px;
+        margin-top: 10px;
+    }
+}
+
+/* Extra Small Devices (Mobile Landscape) */
+@media (max-width: 767px) {
+    .service-card {
+        width: calc(100% - 30px); /* Full width with margin */
+        height: auto; /* Allow height to adjust */
+    }
+    .col-12 {
+        flex: 0 0 100%; /* One card in a row */
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for specific very small devices */
+@media (max-width: 576px) {
+
+    .hero .text-1 {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .hero .text-2 {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .hero p {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .services h2 {
+        font-size: 22px; /* Smaller font size */
+    }
+
+    .service-card h3 {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .col-md-6 {
+        flex: 0 0 65%; /* One column per row on small screens */
+        max-width: 65%;
+    }
+    .service-card {
+        padding: 15px ; /* Reduce padding for smaller screens */
+        height: 390px; /* Allow height to adjust */
+        width: 270px;
+        margin-left: 30px;
+    }
+    .line-layout-box-2 {
+        margin-left: 24px;
+        width: 269px; ;
+        height: 270px;
+    }
+    .service-card h3 {
+        width: 150px;
+        margin-left: 20%;
+        font-size: 24px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .service-card button{
+        align-items: right;
+        margin-left: 100px;
+    }
+    .services h2 {
+        font-size: 28px; /* Smallest font size */
+        line-height: 40px; /* Adjust line height accordingly */
+        margin-left: 50px; /* Adjust margin for smaller screens */
+        margin-right: 10px;
+        width: 300px;
+    }
+
+    .section-text {
+        font-size: 11px; /* Smallest font size */
+        margin-top: -30px;
+        margin-bottom: 50px;
+        line-height: 18px; /* Adjust line height accordingly */
+        margin-left: 50px;
+        width: 90%;
+    }
+    .section-img{
+        display: none;
+    }
+
+    footer {
+        margin: 0px 0px 0px 0; /* Adds some horizontal padding to the footer */
+    }
+
+    .line-layout-footer {
+        width: 370px;
+        margin-top: 2305px;
+    }
+
+
+}
